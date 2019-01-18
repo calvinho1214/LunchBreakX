@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, Button } from 'react-native';
+import { StyleSheet, Text, View, Button, MapView } from 'react-native';
 import {StackActions, NavigationActions} from 'react-navigation';
+import MapEx from './MapEx'
 
-class Details extends Component {
+export default class Details extends Component {
+  constructor() {
+    super();
+ }
   render() {
     return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <View>
+        <MapEx/>
         <Text>Test Route</Text>
         <Button 
         title="Go back to the Home"
@@ -18,8 +23,7 @@ class Details extends Component {
           }))
         }}
         />
-      </View>
-    );
+        </View>
+    )
   }  
 }
-export default Details
